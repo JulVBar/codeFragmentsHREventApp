@@ -1,10 +1,3 @@
-// /*
-//  * Copyright © 2022 EPAM Systems, Inc. All Rights Reserved. All information contained herein is, and remains the
-//  * property of EPAM Systems, Inc. and/or its suppliers and is protected by international intellectual
-//  * property law. Dissemination of this information or reproduction of this material is strictly forbidden,
-//  * unless prior written permission is obtained from EPAM Systems, Inc
-//  */
-
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import { errorNotifier } from 'actions/notificationActions';
@@ -104,14 +97,6 @@ describe('User reducer', () => {
 		expect(transformUser(mockedData)).toEqual(userObject);
 	});
 });
-
-
-/*
- * Copyright © 2022 EPAM Systems, Inc. All Rights Reserved. All information contained herein is, and remains the
- * property of EPAM Systems, Inc. and/or its suppliers and is protected by international intellectual
- * property law. Dissemination of this information or reproduction of this material is strictly forbidden,
- * unless prior written permission is obtained from EPAM Systems, Inc
- */
 
 import {
 	userSelector,

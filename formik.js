@@ -1,33 +1,3 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Form, Formik } from 'formik';
-import PropTypes from 'prop-types';
-
-import { EVENT_TYPES, REQUEST_FORM_NAME, RequestFormTitle } from 'constants/requestFormConstants';
-
-import { eventSelector, eventStateSelector } from 'reducers/event/selectors';
-import {
-	requestFormInitialValues,
-	setEditEventFormSidebarFields,
-	handleEventFormSubmit,
-	setCopyEventFormSubmit,
-} from 'actions/eventFormActions';
-
-import {
-	combinedModeratorListSelector,
-	filteredEventsByRoleSelector,
-	filteredEventTypesNamesByRoleSelector,
-} from 'reducers/events/selectors';
-import { statusesRulesSelector } from 'reducers/statuses/selectors';
-import { resetFiles } from 'reducers/attachments';
-import { Spinner } from 'components';
-
-import { createValidationSchema } from 'utils';
-
-import { EVENT_STATUSES } from 'constants/eventConstants';
-import Fields from './components/Fields';
-import styles from './RequestForm.module.scss';
-
 export const RequestForm = ({
 	eventType,
 	user,
